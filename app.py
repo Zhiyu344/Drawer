@@ -42,9 +42,3 @@ def draw_two(characters):
 if __name__ == "__main__":
     characters = load_characters()
     app.run(debug=True)
-
-    # 调试作用，实际将不会运行
-    id1, char1, id2, char2 = draw_two(characters)
-    print("🎉 抽中的两个人物是：")
-    print(f"角色1：{char1['name']}（ID: {id1}）")
-    print(f"角色2：{char2['name']}（ID: {id2}）")
