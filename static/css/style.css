@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    color: #1D1D1F;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0071E3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0077ED;
+}
+
+button:active {
+    background-color: #006EDB;
+}
+
+
+#result {
+    margin-top: 40px;
+}
+
+/* 卡片部分 */
+.card {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #0066CC;
+    border-radius: 10px;
+    background-color: white;
+    width: 200px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%; /* 圆形头像 */
+    margin-bottom: 10px;
+    background-color: #f0fbff;
+    border: 1px solid #0066CC;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 0;
+}
+
+.label {
+    text-align: right;
+    width: 90px; /* 可根据需要调整 */
+    font-weight: bold;
+    color: #555;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.value {
+    text-align: left;
+    flex-grow: 1;
+    color: #333;
+}
