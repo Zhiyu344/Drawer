@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>人物抽选器</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
 
@@ -21,20 +21,44 @@
                     const resultDiv = document.getElementById('result');
                     resultDiv.innerHTML = `
                         <div class="card">
-                            <h3>角色1</h3>
-                            <p>ID: ${data.char1.id}</p>
-                            <p>名字: ${data.char1.name}</p>
+                            <h3>1 号</h3>
+                            <img src="../static/images/${data.char1.id}.jpg"
+                                onerror="this.onerror=null;
+                                this.src='../static/images/default.png';"
+                                alt="头像"
+                                class="avatar"
+                            >
+                            <div class="info-row">
+                                <span class="label">ID:</span>
+                                <span class="value">${data.char1.id}</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="label">名字:</span>
+                                <span class="value">${data.char1.name}</span>
+                            </div>
                         </div>
                         <div class="card">
-                            <h3>角色2</h3>
-                            <p>ID: ${data.char2.id}</p>
-                            <p>名字: ${data.char2.name}</p>
+                            <h3>2 号</h3>
+                            <img src="../static/images/${data.char2.id}.jpg"
+                                onerror="this.onerror=null;
+                                this.src='../static/images/default.png';"
+                                alt="头像"
+                                class="avatar"
+                            >
+                            <div class="info-row">
+                                <span class="label">ID:</span>
+                                <span class="value">${data.char1.id}</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="label">名字:</span>
+                                <span class="value">${data.char1.name}</span>
+                            </div>
                         </div>
                     `;
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    alert('抽选失败，请查看控制台日志');
+                    alert('抽选失败，请联系管理员检查问题');
                 });
         }
     </script>
