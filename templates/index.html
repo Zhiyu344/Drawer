@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人物抽选器</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <h1>🎉 随机抽取两个人物</h1>
+    <button onclick="drawCharacters()">开始抽选</button>
+
+    <div id="result"></div>
+
+    <script>
+        function drawCharacters() {
+            fetch('/draw')  // 调用 Flask 接口
+                .then(response => response.json())
+                .then(data => {
+                    const resultDiv = document.getElementById('result');
+                    resultDiv.innerHTML = `
+                        <div class="card">
+                            <h3>角色1</h3>
+                            <p>ID: ${data.char1.id}</p>
+                            <p>名字: ${data.char1.name}</p>
+                        </div>
+                        <div class="card">
+                            <h3>角色2</h3>
+                            <p>ID: ${data.char2.id}</p>
+                            <p>名字: ${data.char2.name}</p>
+                        </div>
+                    `;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('抽选失败，请查看控制台日志');
+                });
+        }
+    </script>
+
+</body>
+</html>
