@@ -74,3 +74,12 @@ button:active {
     flex-grow: 1;
     color: #333;
 }
+
+img[alt="头像"] {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>人物抽选器</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
 
@@ -22,11 +22,12 @@
                     resultDiv.innerHTML = `
                         <div class="card">
                             <h3>1 号</h3>
-                            <img src="../static/images/${data.char1.id}.jpg"
+                            <img src="/static/images/${data.char1.id}.jpg"
                                 onerror="this.onerror=null;
-                                this.src='../static/images/default.png';"
+                                this.src='/static/images/default.png';"
                                 alt="头像"
                                 class="avatar"
+                                draggable="false"
                             >
                             <div class="info-row">
                                 <span class="label">ID:</span>
@@ -39,19 +40,20 @@
                         </div>
                         <div class="card">
                             <h3>2 号</h3>
-                            <img src="../static/images/${data.char2.id}.jpg"
+                            <img src="/static/images/${data.char2.id}.jpg"
                                 onerror="this.onerror=null;
-                                this.src='../static/images/default.png';"
+                                this.src='/static/images/default.png';"
                                 alt="头像"
                                 class="avatar"
+                                draggable="false"
                             >
                             <div class="info-row">
                                 <span class="label">ID:</span>
-                                <span class="value">${data.char1.id}</span>
+                                <span class="value">${data.char2.id}</span>
                             </div>
                             <div class="info-row">
                                 <span class="label">名字:</span>
-                                <span class="value">${data.char1.name}</span>
+                                <span class="value">${data.char2.name}</span>
                             </div>
                         </div>
                     `;
